@@ -4,16 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuButton : MonoBehaviour
-{
-    
+{    
     public void StartGame()
     {
-
         SceneManager.LoadScene(1);
-
-
     }
-
-
 
 }//class
