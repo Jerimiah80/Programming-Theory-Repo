@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127546, guid: e3245acddde40bf49aa555d6bdc14998, type: 3}
       propertyPath: m_Name
-      value: Animal_Fox_01
+      value: Fox
       objectReference: {fileID: 0}
     - target: {fileID: 402006, guid: e3245acddde40bf49aa555d6bdc14998, type: 3}
       propertyPath: m_LocalPosition.y
@@ -67,6 +67,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5943735406775287719}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5943735406775325437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 126298, guid: e3245acddde40bf49aa555d6bdc14998,
+    type: 3}
+  m_PrefabInstance: {fileID: 5943735406775287719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &1015188052
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -83,7 +89,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &-643853243623120937
+--- !u!114 &1701833936
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,21 +98,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5943735406775324061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f050fbc15641548ba6d3c9b1cf82a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c81c7ba41051cf44a64cc7b75c059ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groundedPlayer: 0
-  playerVelocity: {x: 0, y: 0, z: 0}
---- !u!65 &1015188054
+--- !u!65 &1348456849
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5943735406775324061}
+  m_GameObject: {fileID: 5943735406775325437}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.058610298, y: 0.17143081, z: 0.27811423}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.08103573, y: 0.20815443, z: 0.3160912}
+  m_Center: {x: -0.000000059604645, y: -0.029301882, z: 0.073896945}

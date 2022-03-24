@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DorbermanJump : Animal//Inheritance
+public class FoxJump : Animal //Inheritance
 {   //Component
     private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        JumpForce = 8f; //Encapsulation 
+        JumpForce = 4f; //Encapsulation 
         groundedPlayer = true;
         rb = GetComponentInChildren<Rigidbody>();
     }
@@ -22,7 +22,7 @@ public class DorbermanJump : Animal//Inheritance
 
     public override void jump() //Polymorphism 
     {
-        if (Input.GetButtonDown("Jump") && groundedPlayer || Input.GetKeyDown(KeyCode.Alpha2) && groundedPlayer)
+        if (Input.GetButtonDown("Jump") && groundedPlayer || Input.GetKeyDown(KeyCode.Alpha3) && groundedPlayer)
         {
             groundedPlayer = false;
             rb.AddForce(transform.position.x, JumpForce, transform.position.z, ForceMode.Impulse);
@@ -38,11 +38,9 @@ public class DorbermanJump : Animal//Inheritance
         if (col.gameObject.CompareTag("Floor"))
         {
             groundedPlayer = true;
-        }        
+        }
 
     }
 
+
 }//class
-
-
-

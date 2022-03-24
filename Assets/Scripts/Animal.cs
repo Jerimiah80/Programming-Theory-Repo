@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    private float jumpForce = 2f;
+    private float jumpForce = 5f;
     public float JumpForce
     {
         get { return jumpForce; }
@@ -14,14 +14,13 @@ public class Animal : MonoBehaviour
     }
    
     public bool groundedPlayer;
-
-    public Vector3 playerVelocity;
     private Rigidbody rb;
     
 
     private void Start()
-    {        
-        rb = GetComponent<Rigidbody>();
+    {
+        groundedPlayer = true;
+        rb = GetComponentInChildren<Rigidbody>();
     }
 
     private void Update()
@@ -36,7 +35,8 @@ public class Animal : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {
-            rb.AddForce(transform.position.x, JumpForce, transform.position.z, ForceMode.Impulse);
+            groundedPlayer = false;
+            rb.AddForce(transform.position.x, jumpForce, transform.position.z, ForceMode.Impulse);
         }      
 
     }
@@ -46,7 +46,7 @@ public class Animal : MonoBehaviour
         if (col.gameObject.CompareTag("Floor"))
         {
             groundedPlayer = true;
-            print("Test");
+            print("test");
         }
 
     }
